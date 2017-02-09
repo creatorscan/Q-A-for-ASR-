@@ -1,0 +1,68 @@
+\documentclass[fleqn,10pt]{wlscirep}
+\title{Q/A on deep learning for ASR}
+
+%\author[1,*]{Alice Author}
+%\author[2]{Bob Author}
+%\author[1,2,+]{Christine Author}
+%\author[2,+]{Derek Author}
+%\affil[1]{Affiliation, department, city, postcode, country}
+%\affil[2]{Affiliation, department, city, postcode, country}
+
+%\affil[*]{corresponding.author@email.example}
+
+%\affil[+]{these authors contributed equally to this work}
+
+%\keywords{Keyword1, Keyword2, Keyword3}
+
+%\begin{abstract}
+%Example Abstract. Abstract must be under 200 words and not include subheadings or citations. Example Abstract. Abstract must be under 200 words and not include subheadings or citations. Example Abstract. Abstract must be under 200 words and not include subheadings or citations. Example Abstract. Abstract must be under 200 words and not include subheadings or citations. Example Abstract. Abstract must be under 200 words and not include subheadings or citations. Example Abstract. Abstract must be under 200 words and not include subheadings or citations. Example Abstract. Abstract must be under 200 words and not include subheadings or citations. Example Abstract. Abstract must be under 200 words and not include subheadings or citations. 
+%\end{abstract}
+\begin{document}
+
+%\flushbottom
+%\maketitle
+% * <john.hammersley@gmail.com> 2015-02-09T12:07:31.197Z:
+%
+%  Click the title above to edit the author information and abstract
+%
+%\thispagestyle{empty}
+%
+%\noindent Please note: Abbreviations should be introduced at the first mention in the main text – no abbreviations lists. Suggested structure of main text (not enforced) is provided below.
+
+\section*{Questions}
+
+%The Introduction section, of referenced text\cite{Figueredo:2009dg} expands on the background of the work (some overlap with the Abstract is acceptable). The introduction should not include subheadings.
+
+%\section*{Results}
+
+%Up to three levels of \textbf{subheading} are permitted. Subheadings should not be numbered.
+
+%\subsection*{Subsection}
+
+%Example text under a subsection. Bulleted lists may be used where appropriate, e.g.
+
+\begin{enumerate}
+\item Alternatives to HMM for ASR ? \\
+Ans: Recurrent neural network is one of the ideal replacement to HMM. Encoder-decoder and attention networks provide a simple approach to this problem.
+\item Best way to initialize NN ?
+Ans: Glorot's intialization (var(w)=2/in+out)) is currently the best way to initialize each hidden neuron. Basically these methods help the feature information reach deep into the network.
+If the weights in a network start too small, then the signal shrinks as it passes through each layer until it’s too tiny to be useful. If the weights in a network start too large, then the signal grows as it passes through each layer until it’s too massive to be useful.
+\item Role of regularization in NN ?
+Each and every part in weight update equation in the NN has a side-kick given to it which is called as regularization parameter. $W_{new} = \alpha\Delta{W} - \eta\frac{\partial E}{\partial W}$. 
+\item How does varying parameters in non-linear function like ReLU act as a regularizer (learning rate) ?
+\item Common factors between dropout and batch-normalization ?
+\item Effect of increasing in depth of the NN ?
+\item Is recursion the better way of generalization ?
+\item The number of time instants captured by the recurrent architectures while decoding/testing ?
+\item Can the hyper-parameters be automatically chosen by the networks or possible to re-configure the hyper-parameters ?
+\item Why is the non-linear function placed after the weight matrix ? 
+\item What is the important component of LSTM which enhances it over other recurrent models ?
+\item What is the role of RBM initialization in training NN ? and when will it be helpful and when not ?
+\item The best possible Eigen values of weight matrix is ? and what is the effects of deviating from that value ? Does residual connection have a contribution to this ? and how?
+\item The importance of priors in training NN for frame-wise classification and sequence-wise classification (eg: sMBR)?
+\item Which type of information is captured by the bias vector when speech is provided as input ? 
+
+\end{enumerate}
+
+
+\end{document}
